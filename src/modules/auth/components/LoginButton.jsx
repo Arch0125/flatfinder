@@ -114,7 +114,7 @@ const LoginButton = () => {
         className="btn btn-outline text-white rounded-full bg-red-300 "
         onClick={() => loginButtonHandler()}
       >
-        Login/SignUp
+        {!fullName ? <label>Login SignUp</label>:<label>Welcome! {fullName}</label>}
       </button>
     </>
   )
