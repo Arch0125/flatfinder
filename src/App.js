@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import LoginButton from './modules/auth/components/LoginButton';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <LoginButton/>
       </header>
     </div>
   );
