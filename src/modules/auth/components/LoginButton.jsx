@@ -110,12 +110,17 @@ const LoginButton = () => {
         setShowModal={setCheckPhoneModal}
         clickHandler={checkPhoneHandler}
       />
-      <button
+     
+      {
+        !fullName? <button
         className="btn btn-outline text-white rounded-full bg-red-300 "
         onClick={() => loginButtonHandler()}
       >
-        {!fullName ? <label>Login SignUp</label>:<label>Welcome! {fullName}</label>}
-      </button>
+        Login/Signup
+      </button>:<div>
+        <label>Welcome! {fullName} <button onClick={() => loginButtonHandler()} >Not You ?</button></label>
+      </div>
+      }
     </>
   )
 }
