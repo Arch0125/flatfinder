@@ -11,6 +11,10 @@ const Search = () => {
 
 
 
+  
+  
+
+
 
 </div>
 <div class="flex  ">
