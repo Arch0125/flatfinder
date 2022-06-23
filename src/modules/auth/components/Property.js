@@ -3,6 +3,7 @@ import "tw-elements";
 import "flowbite";
 import Filter from "../../../components/Filter";
 import FlatButton from "./FlatButton";
+import Navbar from "../../../common/components/Navbar";
 
 const Property = () => {
   return (

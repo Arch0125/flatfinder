@@ -113,7 +113,7 @@ const LoginButton = () => {
      
       {
         !fullName? <button
-        className="btn btn-outline text-white rounded-xl bg-blue-600 p-2"
+        className="text-blue-500 bg-blue-600 p-2 border-1"
         onClick={() => loginButtonHandler()}
       >
         
