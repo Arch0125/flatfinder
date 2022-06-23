@@ -10,9 +10,9 @@ export const AuthContextProvider = ({ children }) => {
   const [email, setEmail] = useState("")
   const [accessToken, setAccessToken] = useState("")
   const[fname,setFname]=useState("");
-  const[rent,setRent]=useState(0);
-  const[deposit,setDeposit]=useState(0);
-  const[area,setArea]=useState(0);
+  const[rent,setRent]=useState(null);
+  const[deposit,setDeposit]=useState(null);
+  const[area,setArea]=useState(null);
   const[fstate,setFstate]=useState("");
   const[city,setCity]=useState("");
   const[furnished,setFurnished]=useState("");

@@ -7,6 +7,7 @@ import Property from "../modules/auth/components/Property";
 const Homepage = () => {
     return (
         <>
+        <Navbar/>
       <Property/>
      
 

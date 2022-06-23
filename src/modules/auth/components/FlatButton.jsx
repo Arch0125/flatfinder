@@ -30,11 +30,15 @@ const FlatButton = () => {
   }
 
   const addflatHandler = async () => {
+    console.log(email)
+    let trent = Number(rent)
+    let tdeposit = Number(deposit)
+    let tarea = Number(area)
     const addflatResponse = await apiAuth.addflat({
       name : `${fname}`,
-      rent : rent,
-      deposit : deposit,
-      area : area,
+      rent : trent,
+      deposit : tdeposit,
+      area : tarea,
       state : `${fstate}`,
       city : `${city}`,
       furnishStatus : `${furnished}`,
@@ -43,7 +47,7 @@ const FlatButton = () => {
       available : available,
       apartmentType : `${type}`,
       ownerPhone :`+91${phone}`,
-      owneremail : `${email}`
+      ownerEmail : `${email}`
     })
 
     console.log(addflatResponse);
