@@ -1,4 +1,5 @@
 import {
+  ADD_FLAT_URL,
     CHECK_PHONE_URL,
     LOGIN_URL,
     REGISTER_URL,
@@ -50,6 +51,16 @@ import {
           return handleError(error)
         }
       }
+
+      this.addflat = async addFlatModal =>{
+        try{
+          const res = await axios.post(ADD_FLAT_URL,addFlatModal)
+          return handleResponse(res);
+        }
+        catch(error){
+          return handleError(error)
+        }
+      } 
     }
   }
   

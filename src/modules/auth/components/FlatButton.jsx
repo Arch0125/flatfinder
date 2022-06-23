@@ -11,18 +11,42 @@ const FlatButton = () => {
 
   const {
     phone,
-    setPhone,
-    sessionId,
-    setSessionId,
-    setFullName,
-    otp,
     fullName,
     email,
-    setAccessToken
+    fname,
+    deposit,
+    rent,
+    area,fstate,
+    city,
+    locality,
+    furnished,
+    tenants,
+    available,
+    type
   } = useAuth()
 
   const flatButtonHandler = () => {
     setAddFlatModal(true)
+  }
+
+  const addflatHandler = async () => {
+    const addflatResponse = await apiAuth.addflat({
+      name : `${fname}`,
+      rent : rent,
+      deposit : deposit,
+      area : area,
+      state : `${fstate}`,
+      city : `${city}`,
+      furnishStatus : `${furnished}`,
+      preferredTenants : `${tenants}`,
+      locality : `${locality}`,
+      available : available,
+      apartmentType : `${type}`,
+      ownerPhone :`+91${phone}`,
+      owneremail : `${email}`
+    })
+
+    console.log(addflatResponse);
   }
 
 
@@ -31,6 +55,7 @@ const FlatButton = () => {
       <AddFlatModal
         showModal={addFlatModal}
         setShowModal={setAddFlatModal}
+        clickHandler={addflatHandler}
       />
      
      <button

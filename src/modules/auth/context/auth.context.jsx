@@ -15,7 +15,7 @@ export const AuthContextProvider = ({ children }) => {
   const[area,setArea]=useState(0);
   const[fstate,setFstate]=useState("");
   const[city,setCity]=useState("");
-  const[furnished,setFurninshed]=useState("");
+  const[furnished,setFurnished]=useState("");
   const[tenants,setTenants]=useState("");
   const[locality,setLocality]=useState("");
   const[available,setAvailable]=useState(true);
@@ -59,7 +59,7 @@ export const AuthContextProvider = ({ children }) => {
         area,setArea,
         fstate,setFstate,
         city,setCity,
-        furnished,setFurninshed,
+        furnished,setFurnished,
         tenants,setTenants,
         locality,setLocality,
         available,setAvailable,
