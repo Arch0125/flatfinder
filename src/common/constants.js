@@ -5,3 +5,4 @@ export const LOGIN_URL = `${BASE_URL}/auth/login`
 export const REGISTER_URL = `${BASE_URL}/auth/register`
 export const CHECK_PHONE_URL = `${BASE_URL}/auth/check`
 export const ADD_FLAT_URL = `${BASE_URL}/flat`
+export const GET_FLAT_URL = `${BASE_URL}/flat/all`

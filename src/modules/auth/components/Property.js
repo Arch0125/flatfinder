@@ -4,6 +4,7 @@ import "flowbite";
 import Filter from "../../../components/Filter";
 import FlatButton from "./FlatButton";
 import Navbar from "../../../common/components/Navbar";
+import Propertylist from "./PropertyList";
 
 const Property = () => {
   return (
@@ -20,7 +21,11 @@ const Property = () => {
           </form>
         <FlatButton/>
         <Filter/>
-      </div>  
+      </div>
+      <div>
+        <button>Get List</button>
+        <Propertylist/>
+      </div>
     </div>
   );
 };
