@@ -35,9 +35,10 @@ export const SignupModal = ({ showModal, setShowModal, clickHandler }) => {
       />
       <OtpInput
         value={otp}
+       
         onChange={otp => setOtp(otp)}
         numInputs={6}
-        className="p-1 mr-1 border border-solid"
+        className="p-1 mr-1 text-black border border-solid"
         separator={<span>&nbsp;</span>}
       />
       <div>
