@@ -17,6 +17,7 @@ const Propertylist=()=>{
     }
 
     return(
+        <> 
         <div className='flex flex-row w-[100vw] p-16 justify-between flex-wrap' >
             {
                 Object.keys(flists).map((flist,index)=>(
@@ -31,6 +32,22 @@ const Propertylist=()=>{
                 ))
             }
         </div>
+        <div> 
+        {/* <section className='mb-20'>
+      <div className='container mx-auto'>
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-14'>
+          {houses.map((house, index) => {
+            return (
+              <Link to={`/property/${house.id}`} key={index}>
+                <House house={house} />
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </section> */}
+    </div>
+      </>
     )
 
 }
