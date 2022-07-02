@@ -20,11 +20,12 @@ const Property = () => {
               </div>
           </form>
         <FlatButton/>
-       
+      
       </div>
       <div>
        
       </div>
+      <Propertylist/>
     </div>
   );
 };

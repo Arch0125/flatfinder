@@ -1,5 +1,6 @@
 import Modal from "react-modal"
 import useAuth from "../context/auth.context"
+import FlatButton from "./FlatButton"
 
 export const AddFlatModal = ({ showModal, setShowModal, clickHandler }) => {
   const { setFname,setRent,setDeposit,setArea,setFstate,setCity,setFurnished,setLocality,setTenants,setType} = useAuth()
@@ -72,8 +73,8 @@ export const AddFlatModal = ({ showModal, setShowModal, clickHandler }) => {
         />
       </div>
       <div>
-        <button className="mb-4 ml-28 mt-8 text-xl text-white  bg-gradient-to-r from-indigo-500 to-purple-400 hover:from-purple-200 hover:to-pink-200 pl-6 pt-2 pb-2 pr-6  rounded-full border-1 btn" onClick={() => clickHandler()}>
-          Post your Flat
+        <button className="mb-4 ml-20 mt-8 text-xl text-white  bg-gradient-to-r from-indigo-500 to-purple-400 hover:from-purple-200 hover:to-pink-200 pl-6 pt-2 pb-2 pr-6  rounded-full border-1 btn" onClick={() => clickHandler()}>
+         <FlatButton/>
         </button>
       </div>
       </div>
