@@ -7,7 +7,7 @@ export const AddFlatModal = ({ showModal, setShowModal, clickHandler }) => {
 
   return (
     <Modal isOpen={showModal} onRequestClose={() => setShowModal(false)}>
-      <div className=" flex h-full  flex-col bg-black items-center  "> 
+      <div className=" flex h-[fit-content]  flex-col bg-black items-center  "> 
     <div class=" w-96 mt-10  h-full mb-20 rounded-xl bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg "> 
       <h1 className="mb-6 mt-4 ml-16 text-4xl  font-bold "> <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-400"> Rent your Flat </span> </h1>
       <div>

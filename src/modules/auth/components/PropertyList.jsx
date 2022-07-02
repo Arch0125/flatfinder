@@ -59,6 +59,7 @@ const Propertylist=()=>{
                 {
                   ((flists[index].apartmentType === atype) && (flists[index].preferredTenants === tenanttype) && ((flists[index].rent >= lbound)&&(flists[index].rent <= ubound)))?
                   <a class="block p-6 w-[500px] bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <img src={flists[index].imageUrl} />
                     <p class="font-normal text-gray-700 dark:text-gray-400">{flists[index].name}</p>
                     <p class="font-normal text-gray-700 dark:text-gray-400">{flists[index].preferredTenants}</p>
                     <button>Rent Flat</button>
