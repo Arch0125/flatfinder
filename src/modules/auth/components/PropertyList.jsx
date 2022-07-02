@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { GET_FLAT_URL } from '../../../common/constants';
+import {RENT_FLAT_URL} from '../../../common/constants';
 import axios from 'axios';
 import { useState } from 'react';
 
@@ -19,6 +20,29 @@ const Propertylist=()=>{
         const res = await axios.get(GET_FLAT_URL);
         setFlist(res.data.data)
         console.log(res.data.data);
+    }
+
+    const rentFlat=async(id,name,rent,deposit,area,state,city,furnishStatus,preferredTenants,locality,apartmentType,ownerPhone,ownerEmail,imageUrl)=>{
+      const res = await axios.patch(RENT_FLAT_URL,
+        {
+            id: id,
+            name: name,
+            rent: rent,
+            deposit: deposit,
+            area: area,
+            state: state,
+            city: city,
+            furnishStatus: furnishStatus,
+            preferredTenants: preferredTenants,
+            locality: locality,
+            available: false,
+            apartmentType: apartmentType,
+            ownerPhone: ownerPhone,
+            ownerEmail: ownerEmail,
+            imageUrl: imageUrl
+        }
+        );
+        console.log(res);
     }
 
     const resetFilter=()=>{
@@ -62,7 +86,10 @@ const Propertylist=()=>{
                     <img src={flists[index].imageUrl} />
                     <p class="font-normal text-gray-700 dark:text-gray-400">{flists[index].name}</p>
                     <p class="font-normal text-gray-700 dark:text-gray-400">{flists[index].preferredTenants}</p>
-                    <button>Rent Flat</button>
+                    {
+                      (flists[index].available === true)?<button onClick={()=>rentFlat(flists[index]._id,flists[index].name,flists[index].rent,flists[index].deposit,flists[index].area,flists[index].state,flists[index].city,flists[index].furnishStatus,flists[index].preferredTenants,flists[index].locality,flists[index].apartmentType,flists[index].ownerPhone,flists[index].ownerEmail,flists[index].imageUrl)} >Rent Flat</button>:<label>Already Rented</label>
+                    }
+                    
                 </a>:
                 null
                 }
