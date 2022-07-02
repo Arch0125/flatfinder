@@ -20,6 +20,7 @@ export const AuthContextProvider = ({ children }) => {
   const[locality,setLocality]=useState("");
   const[available,setAvailable]=useState(true);
   const[type,setType]=useState("");
+  const[image,setImage]=useState("");
 
   useEffect(() => {
     if (accessToken !== "" && accessToken !== undefined) {
@@ -63,7 +64,8 @@ export const AuthContextProvider = ({ children }) => {
         tenants,setTenants,
         locality,setLocality,
         available,setAvailable,
-        type,setType
+        type,setType,
+        image,setImage
       }}
     >
       {children}

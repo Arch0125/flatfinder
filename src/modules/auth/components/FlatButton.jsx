@@ -22,7 +22,8 @@ const FlatButton = () => {
     furnished,
     tenants,
     available,
-    type
+    type,
+    image
   } = useAuth()
 
   const flatButtonHandler = () => {
@@ -47,7 +48,8 @@ const FlatButton = () => {
       available : available,
       apartmentType : `${type}`,
       ownerPhone :`+91${phone}`,
-      ownerEmail : `${email}`
+      ownerEmail : `${email}`,
+      imageUrl : `${image}`
     })
 
     console.log(addflatResponse);

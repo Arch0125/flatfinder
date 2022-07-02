@@ -3,7 +3,7 @@ import useAuth from "../context/auth.context"
 import FlatButton from "./FlatButton"
 
 export const AddFlatModal = ({ showModal, setShowModal, clickHandler }) => {
-  const { setFname,setRent,setDeposit,setArea,setFstate,setCity,setFurnished,setLocality,setTenants,setType} = useAuth()
+  const { setFname,setRent,setDeposit,setArea,setFstate,setCity,setFurnished,setLocality,setTenants,setType,setImage} = useAuth()
 
   return (
     <Modal isOpen={showModal} onRequestClose={() => setShowModal(false)}>
@@ -70,6 +70,12 @@ export const AddFlatModal = ({ showModal, setShowModal, clickHandler }) => {
           placeholder="Tenants Allowed"
           className="w-full ml-8  rounded-md  max-w-xs mb-2 input input-bordered"
           onChange={e => setTenants(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Image Source"
+          className="w-full ml-8  rounded-md  max-w-xs mb-2 input input-bordered"
+          onChange={e => setImage(e.target.value)}
         />
       </div>
       <div>
