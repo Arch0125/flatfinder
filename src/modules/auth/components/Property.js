@@ -23,7 +23,7 @@ const Property = () => {
        
       </div>
       <div>
-        <button>Get List</button>
+        <button className="text-white">Get List</button>
         <Propertylist/>
       </div>
     </div>
