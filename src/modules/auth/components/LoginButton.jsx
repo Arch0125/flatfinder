@@ -113,13 +113,13 @@ const LoginButton = () => {
      
       {
         !fullName? <button
-        className="text-blue-500 bg-blue-600 p-2 border-1"
+        className="text-white bg-purple-600 p-2 border-1"
         onClick={() => loginButtonHandler()}
       >
         
         Login/Signup
       </button>:<div>
-        <label className="font-medium text-blue-500 " >Welcome! {fullName} <button className="border-2 p-1 border-blue-300 ml-3 rounded-xl "   onClick={() => loginButtonHandler()} >Not You ?</button></label>
+        <label className="font-medium text-white " >Welcome! {fullName} <button className="border-2 p-1 border-purple-300 ml-3 rounded-xl "   onClick={() => loginButtonHandler()} >Not You ?</button></label>
         
       </div>
       }
