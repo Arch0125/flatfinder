@@ -3,7 +3,7 @@ import 'tw-elements';
 const Carousel = () => {
     return (
       <div id="carouselExampleControls" class="carousel slide relative" data-bs-ride="carousel">
-      <div class="carousel-inner relative w-full h-96 overflow-hidden">
+      <div class="carousel-inner relative w-full h-96 mt-20 overflow-hidden">
         <div class="carousel-item active relative float-left w-full">
           <img
             src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"

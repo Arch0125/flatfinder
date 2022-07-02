@@ -4,11 +4,11 @@ import Carousel from "../../../components/Carousel";
 const Land=()=>{
     return(
 <>
-<div>
+
 <Navbar/>
-<div className="w-full h-96 bg-black  ">
+<div className="w-full h-screen bg-black  ">
 <div> 
-<h1 className=" font-bold text-6xl pt-12 pb-8   "> 
+<h1 className=" font-bold text-6xl pt-12 pb-20   "> 
 <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-300">
                Explore Flats with Us
             </span>
@@ -16,20 +16,8 @@ const Land=()=>{
 </div>
 <Carousel/>
 
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
- </div>
+ 
 
 
 

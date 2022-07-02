@@ -22,7 +22,7 @@ export const LoginModal = ({ showModal, setShowModal, clickHandler }) => {
         value={otp}
         onChange={otp => setOtp(otp)}
         numInputs={6}
-        className="p-1 text-slate-100  mr-1 border  border-solid"
+        className="p-1 text-white  mr-1 border bg-black border-solid"
         separator={<span>&nbsp;</span>}
       />
       <div>

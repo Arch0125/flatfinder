@@ -113,7 +113,7 @@ const LoginButton = () => {
      
       {
         !fullName? <button
-        className="text-white bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-purple-200 hover:to-pink-200 p-2 rounded-full border-1"
+        className="text-white bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-purple-200 hover:to-pink-200 p-4 mr-4 rounded-full border-1"
         onClick={() => loginButtonHandler()}
       >
         

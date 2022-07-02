@@ -5,8 +5,9 @@ export const CheckPhoneModal = ({ showModal, setShowModal, clickHandler }) => {
   const { phone, setPhone, sessionId, setSessionId, setFullName } = useAuth()
 
   return (
-    <Modal isOpen={showModal} onRequestClose={() => setShowModal(false)}>
-      <h1 className="mb-2">Login/SignUp</h1>
+    <Modal  isOpen={showModal} onRequestClose={() => setShowModal(false)}>
+    <div className=""> 
+      <h1 className="mb-2 ">Login/SignUp</h1>
       <div>
         <input
           type="text"
@@ -20,6 +21,7 @@ export const CheckPhoneModal = ({ showModal, setShowModal, clickHandler }) => {
         <button className="mb-2 btn" onClick={() => clickHandler()}>
           Send OTP
         </button>
+      </div>
       </div>
     </Modal>
   )
