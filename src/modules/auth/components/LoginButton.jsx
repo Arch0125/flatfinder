@@ -24,6 +24,7 @@ const LoginButton = () => {
 
   const loginButtonHandler = () => {
     setCheckPhoneModal(true)
+
   }
 
   const checkPhoneHandler = async () => {
@@ -119,7 +120,7 @@ const LoginButton = () => {
         
         Login/Signup
       </button>:<div>
-        <label className="font-medium text-white " >Welcome! {fullName} <button className="border-2 p-1 border-purple-300 ml-3 rounded-xl "   onClick={() => loginButtonHandler()} >Not You ?</button></label>
+        <label className="font-medium mr-10 text-white " >Welcome! {fullName} <button className="border-2 p-1 border-purple-300 ml-3 rounded-xl "   onClick={() => loginButtonHandler()} >Not You ?</button></label>
         
       </div>
       }

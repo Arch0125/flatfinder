@@ -8,7 +8,7 @@ import Propertylist from "./PropertyList";
 
 const Property = () => {
   return (
-    <div className="flex flex-col w-[100vw] h-[100vh]" >
+    <div className="flex flex-col w-[100vw] bg-black h-[100vh]" >
       <div className="flex flex-row w-[100vw] h-[fit-content] justify-between px-[400px] mt-5" >
           <form>   
               <div class="relative">
@@ -20,7 +20,7 @@ const Property = () => {
               </div>
           </form>
         <FlatButton/>
-        <Filter/>
+       
       </div>
       <div>
         <button>Get List</button>
