@@ -2,25 +2,25 @@ import React from "react";
 import 'tw-elements';
 const Carousel = () => {
     return (
-      <div id="carouselExampleControls " class="content-center carousel slide relative" data-bs-ride="carousel">
-      <div class="carousel-inner  relative w-full overflow-hidden py-36">
-        <div class="carousel-item   active relative float-left w-full">
+      <div id="carouselExampleControls" class="carousel slide relative" data-bs-ride="carousel">
+      <div class="carousel-inner relative w-full overflow-hidden">
+        <div class="carousel-item active relative float-left w-full">
           <img
             src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-            class="block w-full h-96   "
+            class="block w-full"
             alt="Wild Landscape"
           />
         </div>
         <div class="carousel-item relative float-left w-full">
           <img
             src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-            class="block w-full "
+            class="block w-full"
             alt="Camera"
           />
         </div>
         <div class="carousel-item relative float-left w-full">
           <img
-            src="https://picsum.photos/500/300.webp"
+            src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
             class="block w-full"
             alt="Exotic Fruits"
           />
