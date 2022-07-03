@@ -46,8 +46,8 @@ const Propertylist=()=>{
     }
 
     const resetFilter=()=>{
-      setAtype('1 BHK');
-      setTenanttype('All');
+      setAtype('');
+      setTenanttype('');
       setLbound(0);
       setUbound(100000000000);
     }
