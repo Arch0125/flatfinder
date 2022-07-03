@@ -54,24 +54,25 @@ const Propertylist=()=>{
 
     return(
         <> 
+        <div class="bg-black h-[fit-content] w-full"> 
         <div className='w-full h-24 mt-10 bg-purple-600 bg-opacity-20 backdrop-blur-xl rounded drop-shadow-lg'> 
         <div className='flex text-white  flex-row w-[100vw]  h-[fit-content] p-5 justify-between' >
           <div className='flex p-4 flex-row rounded-xl  w-[fit-content] h-fit-content]  bg-purple-400 mx-5 ' >
             <button onClick={e=>setAtype('1 BHK')} className='mx-3' >1 BHK</button>
             <button onClick={e=>setAtype('2 BHK')} className='mx-3' >2 BHK</button>
-            <button onClick={e=>setAtype('3 BHK')} className='mx-3' >3 BHK</button>
+            
           </div>
           <div className='flex rounded-xl  text-white flex-row w-[fit-content] h-fit-content] bg-purple-400 mx-5 ' >
             <button onClick={e=>setTenanttype('All')} className='mx-3' >All</button>
-            <button onClick={e=>setTenanttype('Bachelors')} className='mx-3' >Bachelors</button>
-            <button onClick={e=>setTenanttype('Couples')} className='mx-3' >Couples</button>
-            <button onClick={e=>setTenanttype('')} className='mx-3' >None</button>
+            <button onClick={e=>setTenanttype('Family')} className='mx-3' >Family</button>
+            <button onClick={e=>setTenanttype('Men')} className='mx-3' >Men</button>
+            <button onClick={e=>setTenanttype('Women')} className='mx-3' >Women</button>
           </div>
           <div className='flex rounded-xl  flex-row w-[fit-content] items-center h-fit-content] bg-purple-400 mx-5 ' >
             <label className='text-white pl-4 pr-4  '>Rent Range : </label>
-            <input onChange={e=>setLbound(e.target.value)} className=' border-black-700 rounded-xl border-2 w-[150px] mx-2 ' placeholder='Lowest Rent' />
+            <input onChange={e=>setLbound(e.target.value)} className=' border-black-700 rounded-xl text-black border-2 w-[150px] mx-2 ' placeholder='Lowest Rent' />
             <label>to</label>
-            <input onChange={e=>setUbound(e.target.value)} className=' border-2 w-[150px] rounded-xl mx-2 ' placeholder='Highest Rent' />
+            <input onChange={e=>setUbound(e.target.value)} className=' border-2 w-[150px] text-black rounded-xl mx-2 ' placeholder='Highest Rent' />
           </div>
           <button onClick={resetFilter} className='bg-purple-400 p-2 mr-4 text-white bg-gradient-to-r from-indigo-500 to-purple-400 hover:from-purple-400 hover:to-pink-200 p-4 mr-4  border-1 rounded-xl ' >Reset Filter</button>
         </div>
@@ -82,8 +83,9 @@ const Propertylist=()=>{
                 <>
                 {
                   ((flists[index].apartmentType === atype) && (flists[index].preferredTenants === tenanttype) && ((flists[index].rent >= lbound)&&(flists[index].rent <= ubound)))?
-                  <a class="block p-6 w-[500px] bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <img src={flists[index].imageUrl} />
+                  <a class="block items-center flex flex-col mt-10 p-6 w-[500px] bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                  
+                    <img class='w-64  h-32' src={flists[index].imageUrl} />
                     <p class="font-normal text-gray-700 dark:text-gray-400">{flists[index].name}</p>
                     <p class="font-normal text-gray-700 dark:text-gray-400">{flists[index].preferredTenants}</p>
                     {
@@ -114,6 +116,7 @@ const Propertylist=()=>{
         </div>
       </div>
     </section> */}
+    </div>
     </div>
       </>
     )

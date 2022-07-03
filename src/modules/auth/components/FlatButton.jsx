@@ -48,7 +48,7 @@ const FlatButton = () => {
       available : available,
       apartmentType : `${type}`,
       ownerPhone :`+91${phone}`,
-      ownerEmail : `${email}`,
+      ownerEmail : "ruthurao@gmail.com",
       imageUrl : `${image}`
     })
 

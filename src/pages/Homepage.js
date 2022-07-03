@@ -8,9 +8,10 @@ import LoginButton from "../modules/auth/components/LoginButton";
 const Homepage = () => {
     return (
         <>
-        <div className="bg-black h-screen w-full">
+        <div className="bg-black h-[fit-content] w-full">
         <Navbar/>
       <Property/>
+      
       </div>
      
 
