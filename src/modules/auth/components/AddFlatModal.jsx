@@ -79,6 +79,8 @@ export const AddFlatModal = ({ showModal, setShowModal, clickHandler }) => {
         />
       </div>
       <div>
+      <button className="mb-4 ml-20 mt-8 text-xl text-white  bg-gradient-to-r from-indigo-500 to-purple-400 hover:from-purple-200 hover:to-pink-200 pl-6 pt-2 pb-2 pr-6  rounded-full border-1 btn" onClick={() => clickHandler()}>
+      <a href="https://65kpl.csb.app/" target="_blank" >Upload Image to IPFS</a></button>
         <button className="mb-4 ml-20 mt-8 text-xl text-white  bg-gradient-to-r from-indigo-500 to-purple-400 hover:from-purple-200 hover:to-pink-200 pl-6 pt-2 pb-2 pr-6  rounded-full border-1 btn" onClick={() => clickHandler()}>
          <FlatButton/>
         </button>
