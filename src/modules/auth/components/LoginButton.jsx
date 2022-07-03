@@ -118,7 +118,7 @@ const LoginButton = () => {
         onClick={() => loginButtonHandler()}
       >
         
-        Login/Signup
+        Login/ Signup
       </button>:<div>
         <label className="font-medium mr-14 text-white " >Welcome! {fullName} <button className="border-2 p-1 border-purple-300 ml-3 rounded-xl "   onClick={() => loginButtonHandler()} >Not You ?</button></label>
         
