@@ -54,7 +54,7 @@ const Propertylist=()=>{
 
     return(
         <> 
-        <div className='w-full h-24 mt-10 bg-white bg-opacity-50 backdrop-blur-xl rounded drop-shadow-lg'> 
+        <div className='w-full h-24 mt-10 bg-purple-600 bg-opacity-20 backdrop-blur-xl rounded drop-shadow-lg'> 
         <div className='flex text-white  flex-row w-[100vw]  h-[fit-content] p-5 justify-between' >
           <div className='flex p-4 flex-row rounded-xl  w-[fit-content] h-fit-content]  bg-purple-400 mx-5 ' >
             <button onClick={e=>setAtype('1 BHK')} className='mx-3' >1 BHK</button>
