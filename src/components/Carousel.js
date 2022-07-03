@@ -3,25 +3,35 @@ import 'tw-elements';
 const Carousel = () => {
     return (
       <div id="carouselExampleControls" class="carousel slide relative" data-bs-ride="carousel">
-      <div class="carousel-inner relative w-full h-96 mt-20 overflow-hidden">
-        <div class="carousel-item active relative float-left w-full">
+      <div class="carousel-inner relative w-full  h-96  mt-20 overflow-hidden ">
+        <div class="carousel-item active relative  w-full float-left ">
           <img
-            src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+            src="  https://i.ibb.co/gFtt8WJ/flatpic9.jpg"
             class="block w-full"
             alt="Wild Landscape"
           />
         </div>
-        <div class="carousel-item relative float-left w-full">
+        <div class="carousel-item relative w-full  float-left ">
           <img
-            src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+            src=" https://i.ibb.co/nLLvM0d/flatpic2.jpg"
             class="block w-full"
             alt="Camera"
           />
+       
         </div>
-        <div class="carousel-item relative float-left w-full">
+        <div class="carousel-item relative  float-left w-full">
           <img
-            src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-            class="block w-full"
+    
+            src="  https://i.ibb.co/fv8TYM1/flatpic8.jpg"
+            class="block w-full "
+            alt="Exotic Fruits"
+          />
+        </div>
+        <div class="carousel-item relative  float-left w-full">
+          <img
+    
+           src="     https://i.ibb.co/5Gxx8Yz/flatpic12.jpg    "
+            class="block w-full "
             alt="Exotic Fruits"
           />
         </div>

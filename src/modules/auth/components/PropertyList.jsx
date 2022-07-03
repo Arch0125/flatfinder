@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { GET_FLAT_URL } from '../../../common/constants';
 import {RENT_FLAT_URL} from '../../../common/constants';
 import axios from 'axios';
+
 import { useState } from 'react';
 
 const Propertylist=()=>{
@@ -83,16 +84,54 @@ const Propertylist=()=>{
                 <>
                 {
                   ((flists[index].apartmentType === atype) && (flists[index].preferredTenants === tenanttype) && ((flists[index].rent >= lbound)&&(flists[index].rent <= ubound)))?
-                  <a class="block items-center flex flex-col mt-10 p-6 w-[500px] bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                   
-                    <img class='w-64  h-32' src={flists[index].imageUrl} />
-                    <p class="font-normal text-gray-700 dark:text-gray-400">{flists[index].name}</p>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">{flists[index].preferredTenants}</p>
+                  <div className='bg-white shadow-1 p-5 rounded-lg rounded-tr-[90px] w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition'>
+      <img className='mb-8 w-64  h-32' src={flists[index].imageUrl} alt='' />
+      <div className='mb-4 flex gap-x-2 text-sm'>
+        <div className='bg-purple-400 rounded-full text-white px-3 inline-block'>
+        {flists[index].preferredTenants}
+        </div>
+        <div className='bg-violet-500 rounded-full text-white px-3 inline-block'>
+        {flists[index].state}
+        </div>
+        <div className='bg-violet-500 rounded-full text-white px-3 inline-block'>
+        {flists[index].city}
+        </div>
+      </div>
+      <div className='text-lg font-semibold max-w-[260px]'>{flists[index].locality}</div>
+      <div className='flex gap-x-4 my-4'>
+        <div className='flex items-center text-gray-600 gap-1'>
+          <div className='text-[20px] rounded-full'>
+            {/* <BiBath/> */}
+          </div>
+          <div className='text-base'> {flists[index].apartmentType}</div>
+        </div>
+        <div className='flex items-center text-gray-600 gap-1'>
+          <div className='text-[20px] rounded-full'>
+           {/* <BiBed/> */}
+          </div>
+          <div className='text-base'> {flists[index].furnishStatus } </div>
+        </div>
+        <div className='flex items-center text-gray-600 gap-1'>
+          <div className='text-[20px] rounded-full'>
+            {/* <BiArea /> */}
+          </div>
+          <div className='text-base'> {flists[index].area} Sq Ft</div>
+        </div>
+       
+        
+      </div>
+      <div className='text-lg font-semibold text-violet-600 mb-4'>
+        INR  {flists[index].rent}
+      </div>
+      <div className='text-bold text-violet-600 mb-4 '>  {flists[index].ownerPhone} </div>
+
                     {
-                      (flists[index].available === true)?<button onClick={()=>rentFlat(flists[index]._id,flists[index].name,flists[index].rent,flists[index].deposit,flists[index].area,flists[index].state,flists[index].city,flists[index].furnishStatus,flists[index].preferredTenants,flists[index].locality,flists[index].apartmentType,flists[index].ownerPhone,flists[index].ownerEmail,flists[index].imageUrl)} >Rent Flat</button>:<label>Already Rented</label>
+        
+                      (flists[index].available === true)?<button className="text-white text-xl mr-10 p-8 text-white bg-gradient-to-r from-indigo-600 via-purple-500 to-purple-400 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-400 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-900/80 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2" onClick={()=>rentFlat(flists[index]._id,flists[index].name,flists[index].rent,flists[index].deposit,flists[index].area,flists[index].state,flists[index].city,flists[index].furnishStatus,flists[index].preferredTenants,flists[index].locality,flists[index].apartmentType,flists[index].ownerPhone,flists[index].ownerEmail,flists[index].imageUrl)} >Rent Flat</button>:<label className="text-xl text-bold">Already Rented</label>
                     }
                     
-                </a>:
+                </div>:
                 null
                 }
                 </>
@@ -111,3 +150,38 @@ const Propertylist=()=>{
 }
 
 export default Propertylist
+{/* <div className='bg-white shadow-1 p-5 rounded-lg rounded-tl-[90px] w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition'>
+      <img className='mb-8 w-64  h-32' src={flists[index].imageUrl} alt='' />
+      <div className='mb-4 flex gap-x-2 text-sm'>
+        <div className='bg-green-500 rounded-full text-white px-3 inline-block'>
+        {flists[index].preferredTenants}
+        </div>
+        <div className='bg-violet-500 rounded-full text-white px-3 inline-block'>
+        {flists[index].state}
+        </div>
+      </div>
+      <div className='text-lg font-semibold max-w-[260px]'>{flists[index].locality}</div>
+      <div className='flex gap-x-4 my-4'>
+        <div className='flex items-center text-gray-600 gap-1'>
+          <div className='text-[20px] rounded-full'>
+            <BiBed />
+          </div>
+          <div className='text-base'> {flists[index].apartmentType}</div>
+        </div>
+        <div className='flex items-center text-gray-600 gap-1'>
+          <div className='text-[20px] rounded-full'>
+            <BiBath />
+          </div>
+          <div className='text-base'> {flists[index].furnishStatus</div>
+        </div>
+        <div className='flex items-center text-gray-600 gap-1'>
+          <div className='text-[20px] rounded-full'>
+            <BiArea />
+          </div>
+          <div className='text-base'> {flists[index].area}</div>
+        </div>
+      </div>
+      <div className='text-lg font-semibold text-violet-600 mb-4'>
+        INR  {flists[index].rent}
+      </div>
+    </div>  */}
