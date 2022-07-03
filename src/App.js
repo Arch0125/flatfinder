@@ -7,7 +7,7 @@ import Land from './modules/auth/components/LandingPage';
 function App() {
   return (
     <div className="App">
-     <Homepage/>
+    <Homepage/>
 {/* <Land/> */}
     </div>
   );
