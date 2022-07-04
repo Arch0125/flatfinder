@@ -11,6 +11,7 @@ const Propertylist=()=>{
     const[tenanttype,setTenanttype]=useState('');
     const[lbound,setLbound]=useState(0);
     const[ubound,setUbound]=useState(10000000000);
+    const[furnish,setFurnish]=useState('');
 
     useEffect(()=>{
         getList();
@@ -47,8 +48,8 @@ const Propertylist=()=>{
     }
 
     const resetFilter=()=>{
-      setAtype('');
-      setTenanttype('');
+      setAtype('1 BHK');
+      setTenanttype('All');
       setLbound(0);
       setUbound(100000000000);
     }
@@ -69,6 +70,11 @@ const Propertylist=()=>{
             <button onClick={e=>setTenanttype('Men')} className='mx-3' >Men</button>
             <button onClick={e=>setTenanttype('Women')} className='mx-3' >Women</button>
           </div>
+          <div className='flex rounded-xl  text-white flex-row w-[fit-content] h-fit-content] bg-purple-400 mx-5 ' >
+            <button onClick={e=>setFurnish('Furnished')} className='mx-3' >Furnished</button>
+            <button onClick={e=>setFurnish('Semi-Furnished')} className='mx-3' >Semi-Furnished</button>
+            <button onClick={e=>setFurnish('Un-Furnished')} className='mx-3' >Un-Furnished</button>
+          </div>
           <div className='flex rounded-xl  flex-row w-[fit-content] items-center h-fit-content] bg-purple-400 mx-5 ' >
             <label className='text-white pl-4 pr-4  '>Rent Range : </label>
             <input onChange={e=>setLbound(e.target.value)} className=' border-black-700 rounded-xl text-black border-2 w-[150px] mx-2 ' placeholder='Lowest Rent' />
@@ -83,7 +89,7 @@ const Propertylist=()=>{
                     
                 <>
                 {
-                  ((flists[index].apartmentType === atype) && (flists[index].preferredTenants === tenanttype) && ((flists[index].rent >= lbound)&&(flists[index].rent <= ubound)))?
+                  ((flists[index].furnishStatus ===furnish) && (flists[index].apartmentType === atype) && (flists[index].preferredTenants === tenanttype) && ((flists[index].rent >= lbound)&&(flists[index].rent <= ubound)))?
                   
                   <div className='bg-white shadow-1 p-5 rounded-lg rounded-tr-[90px] w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition'>
       <img className='mb-8 w-64  h-32' src={flists[index].imageUrl} alt='' />
